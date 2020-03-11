@@ -22,9 +22,6 @@ using Microsoft.Win32;
 
 namespace cryptology_wpf_1
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         string currentFileName;
@@ -87,7 +84,7 @@ namespace cryptology_wpf_1
         }
         private static string Encode(string message, int E, int n)
         {
-            string result = String.Empty;
+            string result = "";
             foreach (char symbol in message)
             {
                 int num = Alphabet[symbol];
@@ -189,9 +186,6 @@ namespace cryptology_wpf_1
             PrintDialog printDialog = new PrintDialog();
             printDialog.ShowDialog();
         }
-        //Vigenere
-        //генерування повторюваного пароля
-
         private void SwitchTextButton_Click(object sender, RoutedEventArgs e)
         {
             string first = rawTextBox.Text;
